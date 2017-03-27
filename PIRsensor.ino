@@ -3,6 +3,7 @@ int inputPin = 3;      // choose the input pin (for PIR sensor)
 int pirState = LOW;    // we start, assuming no motion detected
 int val      = 0;      // variable for reading the pin status
 
+
 //the time we give the sensor to calibrate (10-60 secs according to the datasheet)
 int calibrationTime = 30; //This time is in seconds
  
@@ -10,7 +11,7 @@ void setup() {
   pinMode(ledPin, OUTPUT);      // declare LED as output
   pinMode(inputPin, INPUT);     // declare sensor as input
  
-  Serial.begin(9600);
+  Serial.begin(9600); //start serial for debug
   Serial.println("Waiting for the sensor to warm up.");
 //  delay(calibrationTime * 1000); // Convert the time from seconds to milliseconds.
   Serial.println("SENSOR ACTIVE");
